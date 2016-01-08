@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bUM-Kw-AMB">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Tweet Table View Controller-->
+        <scene sceneID="8e8-5Q-RcP">
+            <objects>
+                <tableViewController id="ZBe-xa-j7Z" customClass="TweetTableViewController" customModule="TweetSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="165" sectionHeaderHeight="22" sectionFooterHeight="22" id="nsv-WQ-qLW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <textField key="tableHeaderView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="center" minimumFontSize="17" id="R2r-p9-wpy" userLabel="Search">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <textInputTraits key="textInputTraits" keyboardType="webSearch" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
+                        </textField>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="165" id="f1q-eD-GOu" customClass="TweetCell" customModule="TweetSearch" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="52" width="600" height="165"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f1q-eD-GOu" id="7pZ-uQ-MmD">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="164.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ZBe-xa-j7Z" id="cTQ-vn-wtg"/>
+                            <outlet property="delegate" destination="ZBe-xa-j7Z" id="PfV-rC-23g"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Ju2-hN-Ne6"/>
+                    <connections>
+                        <outlet property="searchBar" destination="R2r-p9-wpy" id="1qP-2p-dyx"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lto-7q-u0c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1171" y="286"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="47b-Iq-udf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="bUM-Kw-AMB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qWp-8G-V1S">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZBe-xa-j7Z" kind="relationship" relationship="rootViewController" id="tY3-Ik-byA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A0b-KT-cSO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="359" y="288"/>
+        </scene>
+    </scenes>
+</document>
