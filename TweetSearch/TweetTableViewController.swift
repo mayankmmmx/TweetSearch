@@ -130,6 +130,7 @@ class TweetTableViewController: UITableViewController,CLLocationManagerDelegate,
         allTweets.removeAll() //empties allTweets array to ensure that each search has independent results
         
         //Performs fetch to get most recent tweets based on user search and user location (5mi radius of user)
+        print(swifter)
         swifter.getSearchTweetsWithQuery(searchTerm, geocode: geoCode, lang: nil, locale: nil, resultType: "recent", count: 100, until: nil, sinceID: nil, maxID: nil, includeEntities: true, callback: nil, success: { (statuses, searchMetadata) -> Void in
             
             //If there are results, parse them into tweets and add to array, else display error message to retry
